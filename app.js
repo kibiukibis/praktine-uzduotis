@@ -1,6 +1,3 @@
-$( document ).ready(function() {
-   
-});
 
 // global variables
  var movies = [];
@@ -64,7 +61,6 @@ $( ".title" ).on( "click", function(e) {
     $('.title .active').removeClass('active');
     $( e.target ).addClass('active');
     movie = e.target.dataset.name;
-    console.log(movie);
     getMovieList(movie);
 });
 
