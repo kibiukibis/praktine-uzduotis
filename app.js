@@ -28,7 +28,7 @@ function getMovieList(title, type, axis) {
 
 // function to sort movies by title/year and ascending/descending
 function sortList(type, axis) {
-    
+
     if (type === 'year'){
         if(axis === 'asc'){
             movies.sort(function(a, b){return a.Year > b.Year})
@@ -60,6 +60,7 @@ function showList() {
 // Event handler for movies filtering
 
 $( ".title" ).on( "click", function(e) {
+    $('.filter .active').removeClass('active');
     $('.title .active').removeClass('active');
     $( e.target ).addClass('active');
     movie = e.target.dataset.name;
