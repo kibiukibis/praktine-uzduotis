@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Movies</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="page-header">
+        <h1>Movies</h1>
+    </div>
+    <div class="panel panel-default">
+            <div class="panel-heading">
+                    <div class="btn-group title">
+                            <button type="button" data-name="Batman" class="btn btn-default batman">Batman</button>
+                            <button type="button" data-name="Superman" class="btn btn-default superman">Superman</button>
+                            <button type="button" data-name="Iron man" class="btn btn-default ironman">Iron man</button>
+                    </div>
+            </div>
+          </div>
+   
+
+<div class="panel panel-default">
+        <div class="panel-heading">
+           <h4>Movies list</h4>     
+        </div>
+        <div class="panel-body">
+                <table class="table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th class="col-md-9">
+                                <div class="d-inline">Title
+                                <div class="btn-group d-inline filter-title filter">
+                                        <button type="button" data-axis="desc" data-type="title" class="btn btn-default btn-sm title-desc filtered">
+                                            <span class="glyphicon glyphicon-arrow-up"></span>
+                                        </button>
+                                        <button type="button" data-axis="asc" data-type="title" class="btn btn-default btn-sm title-asc filtered">
+                                            <span class="glyphicon glyphicon-arrow-down"></span>
+                                        </button>
+                                        
+                                </div>
+                            </div>
+                            </th>
+                            <th class="col-md-3">
+                                 <div class="d-inline">Years
+                                 <div class="btn-group d-inline filter-year filter">
+                                        <button type="button" data-axis="desc" data-type="year" class="btn btn-default btn-sm year-desc filtered">
+                                            <span class="glyphicon glyphicon-arrow-up"></span>
+                                        </button>
+                                        <button type="button" data-axis="asc" data-type="year" class="btn btn-default btn-sm year-asc filtered">
+                                              <span class="glyphicon glyphicon-arrow-down"></span>
+                                        </button>
+                                            
+                                    </div>
+                                </div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        
+                        </tbody>
+                      </table>
+        </div>
+      </div>
+  
+
+
+
+
+
+
+  
+    
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
