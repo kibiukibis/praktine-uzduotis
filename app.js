@@ -5,7 +5,8 @@
  var bookmarkBar = document.querySelector('.title');
  var searchField = document.querySelector('input');
  var bookmark = ["Batman", "Superman", "Iron man"];
-
+//  var bookmark = [];
+//  localStorage.setItem('bookmark', JSON.stringify(bookmark));
  
 // on page load retrieve bookmark array from localStorage and show bookmark bar 
 // if user is first time on page, set default bookmark bar
@@ -17,6 +18,7 @@
 } else {
     updateBookmark(bookmark);  
 }
+
 });
 
 // save to localStorage updated bookmark array, add new bookmark to bookmark bar
@@ -24,7 +26,9 @@ function updateBookmark(bookmark) {
         localStorage.setItem('bookmark', JSON.stringify(bookmark));
         bookmark.forEach((element,index) => {
         var html = `<button type="button" data-name="${element}" data-do="show" class="btn btn-default">${element}
-        <span data-id="${index}" data-do="remove" class="glyphicon glyphicon-remove"></span>
+        </button>
+        <button type="button" data-do="remove" data-id="${index}" class="btn btn-default">
+        <span class="glyphicon glyphicon-remove"></span>
         </button>`;
         bookmarkBar.insertAdjacentHTML('beforeend', html);
         

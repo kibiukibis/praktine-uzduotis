@@ -13,8 +13,8 @@
     margin-top: 10px;
 }
 
-/* .glyphicon-remove{
-    z-index: 999;
-} */
+.glyphicon-remove{
+   pointer-events: none;
+}
 
    
