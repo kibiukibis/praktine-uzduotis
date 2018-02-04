@@ -1,3 +1,20 @@
 .filter .glyphicon{
     pointer-events: none;
 }
+.table img{
+    width:60px;
+    margin-right: 10px;
+}
+.table > tbody > tr > td {
+    vertical-align: middle;
+    }
+
+.btn-bookmark {
+    margin-top: 10px;
+}
+
+/* .glyphicon-remove{
+    z-index: 999;
+} */
+
+   
