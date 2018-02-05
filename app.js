@@ -4,25 +4,26 @@
  var list = document.querySelector('tbody');
  var bookmarkBar = document.querySelector('.title');
  var searchField = document.querySelector('input');
- var bookmark = ["Batman", "Superman", "Iron man"];
-//  var bookmark = [];
-//  localStorage.setItem('bookmark', JSON.stringify(bookmark));
- 
+ var bookmark = [];
+//  localStorage.clear();
 // on page load retrieve bookmark array from localStorage and show bookmark bar 
 // if user is first time on page, set default bookmark bar
  $( document ).ready(function() {
-    if(typeof bookmark !== null) {
-    var retrievedObject = localStorage.getItem('bookmark');
-    bookmark = JSON.parse(retrievedObject);
-    updateBookmark(bookmark);  
-} else {
-    updateBookmark(bookmark);  
+    if(localStorage && localStorage.getItem('bookmark')){
+        console.log("localStorage seted");
+        var retrievedObject = localStorage.getItem('bookmark');
+        bookmark = JSON.parse(retrievedObject);
+       updateBookmark();
+      } else {
+        bookmark = ["Batman", "Superman", "Iron man"];
+        localStorage.setItem('bookmark', JSON.stringify(bookmark));
+        console.log("localStorage was unset");
+        updateBookmark();
 }
-
-});
+ });
 
 // save to localStorage updated bookmark array, add new bookmark to bookmark bar
-function updateBookmark(bookmark) {
+function updateBookmark() {
         localStorage.setItem('bookmark', JSON.stringify(bookmark));
         bookmark.forEach((element,index) => {
         var html = `<button type="button" data-name="${element}" data-do="show" class="btn btn-default">${element}
@@ -95,7 +96,7 @@ $( ".title" ).click(function(event) {
     }else if(event.target.dataset.do === "remove"){
         bookmark.splice(event.target.dataset.id, 1);
         $(".title").empty();
-        updateBookmark(bookmark);
+        updateBookmark();
     }
    
    
@@ -131,7 +132,7 @@ $( ".btn-bookmark" ).mousedown(function() {
     if(movie !==""){
         bookmark.push(movie);
         $(".title").empty();
-        updateBookmark(bookmark);
+        updateBookmark();
     }else return; 
 });
 
