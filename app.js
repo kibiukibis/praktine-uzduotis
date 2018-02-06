@@ -1,3 +1,5 @@
+"use strict";
+
 // global variables
  var movies = [];
  var movie = '';
@@ -20,7 +22,7 @@
         console.log("localStorage was unset");
         updateBookmark();
 }
- });
+
 
 // save to localStorage updated bookmark array, add new bookmark to bookmark bar
 function updateBookmark() {
@@ -150,7 +152,7 @@ $( ".btn-bookmark" ).mousedown(function() {
 
 
 
-
+});
 
 
 
